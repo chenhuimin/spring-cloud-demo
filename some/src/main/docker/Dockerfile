@@ -2,9 +2,10 @@ FROM java:8
 VOLUME /tmp
 RUN mkdir /app
 ADD some-1.0.0-SNAPSHOT.jar /app/app.jar
-ADD runboot.sh /app/
+#ADD runboot.sh /app/
 RUN bash -c 'touch /app/app.jar'
 WORKDIR /app
-RUN chmod a+x runboot.sh
+#RUN chmod a+x runboot.sh
 EXPOSE 8083
-CMD /app/runboot.sh
+#CMD /app/runboot.sh
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/app.jar"]

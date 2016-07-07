@@ -25,6 +25,7 @@
         <relativePath/>
     </parent>
     <properties>
+        <docker.image.prefix>chm</docker.image.prefix>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
@@ -55,7 +56,7 @@
                 <version>0.4.10</version>
                 <configuration>
                     <dockerHost>http://node1:2375</dockerHost>
-                    <imageName>${project.name}:${project.version}</imageName>
+                    <imageName>${docker.image.prefix}/${project.name}:${project.version}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
                     <skipDockerBuild>false</skipDockerBuild>
                     <resources>
