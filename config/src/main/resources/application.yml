@@ -14,4 +14,7 @@ spring:
 
 server:
   port: 8888
+
 debug: true
+logging:
+  file: ${spring.application.name}.log

@@ -1,5 +1,8 @@
 server:
   port: 8761
+spring:
+  application:
+    name: discovery
 eureka:
   instance:
     hostname: localhost
@@ -7,3 +10,5 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
 debug: true
+logging:
+  file: ${spring.application.name}.log

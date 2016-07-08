@@ -21,3 +21,6 @@ eureka:
 sidecar:
   port: 8000
 
+logging:
+  file: ${spring.application.name}.log
+
