@@ -71,7 +71,7 @@
                         <!--<imageTags>${project.version}</imageTags>-->
                         <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
                         <noCache>true</noCache>
-                        <skipDockerBuild>true</skipDockerBuild>
+                        <skipDockerBuild>false</skipDockerBuild>
                         <pushImage>true</pushImage>
                         <resources>
                             <resource>

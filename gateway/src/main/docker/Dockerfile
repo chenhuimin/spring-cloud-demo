@@ -7,6 +7,5 @@ RUN bash -c 'touch /app/app.jar'
 WORKDIR /app
 #RUN chmod a+x runboot.sh
 EXPOSE 10000
-EXPOSE 8000
 #CMD /app/runboot.sh
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/app.jar"]
