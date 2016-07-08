@@ -1,22 +1,22 @@
 server:
-    port: 10000
+  port: 10000
 
 endpoints:
-    restart:
-        enabled: true
-    shutdown:
-        enabled: true
-    health:
-        sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 
 eureka:
-    instance:
-        hostname: gateway
-    client:
-        registerWithEureka: true
-        fetchRegistry: true
+  instance:
+    non-secure-port: ${server.port:10000}
+  client:
+    registerWithEureka: true
+      fetchRegistry: true
         serviceUrl:
-            defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+          defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
 sidecar:
-    port: 8000
+  port: 8000
 
