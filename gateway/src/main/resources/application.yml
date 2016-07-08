@@ -13,10 +13,11 @@ eureka:
   instance:
     non-secure-port: ${server.port:10000}
   client:
-    registerWithEureka: true
-      fetchRegistry: true
-        serviceUrl:
-          defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+
 sidecar:
   port: 8000
 
